@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://ditri3lxg3yhc"]
+
+[ext_resource type="Script" uid="uid://dx54g0ggdwww2" path="res://nameinputsystem.gd" id="1_w4v5f"]
+
+[sub_resource type="SystemFont" id="SystemFont_ypof5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypof5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4v5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ea4wm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1f64c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_by67t"]
+
+[node name="nameinputsystem" type="VBoxContainer"]
+texture_filter = 1
+offset_left = 70.0
+offset_right = 570.0
+offset_bottom = 480.0
+theme_override_constants/separation = 16
+alignment = 1
+script = ExtResource("1_w4v5f")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ypof5")
+theme_override_font_sizes/font_size = 32
+text = "Please insert name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ypof5")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 7
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="quit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ypof5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w4v5f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ea4wm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1f64c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_by67t")
+text = "quit"
+
+[node name="backspace" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ypof5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w4v5f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ea4wm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1f64c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_by67t")
+text = "backspace"
+
+[node name="done" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ypof5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w4v5f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ea4wm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_1f64c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_by67t")
+text = "done"
+
+[connection signal="pressed" from="HBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="HBoxContainer/backspace" to="." method="_on_backspace_pressed"]
+[connection signal="pressed" from="HBoxContainer/done" to="." method="_on_done_pressed"]

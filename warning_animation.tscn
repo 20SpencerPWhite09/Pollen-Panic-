@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ixqnotvq8ql"]
+
+[ext_resource type="Texture2D" uid="uid://w6knuv3ftuh8" path="res://animation tile.png" id="1_m7bup"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qg3qx"]
+texture = ExtResource("1_m7bup")
+texture_region_size = Vector2i(8, 8)
+
+[sub_resource type="TileSet" id="TileSet_htpji"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_qg3qx")
+
+[node name="TileMapLayer" type="TileMapLayer"]
+texture_filter = 1
+tile_set = SubResource("TileSet_htpji")
