@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlnl4od77wt71"]
+
+[ext_resource type="Script" uid="uid://cvwkmscvo4guh" path="res://bullet.gd" id="1_ruw68"]
+[ext_resource type="Texture2D" uid="uid://blg6bejx35f1p" path="res://blue square.jpg" id="2_uidqs"]
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_ruw68")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0126953125, 0.012939453)
+texture = ExtResource("2_uidqs")
+
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D"]
+position = Vector2(-110, -110)
+rotation = -0.7853982
+scale = Vector2(6, 6)
+collide_with_areas = true
+collide_with_bodies = false

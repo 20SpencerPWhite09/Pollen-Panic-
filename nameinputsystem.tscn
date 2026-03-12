@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ditri3lxg3yhc"]
+[gd_scene load_steps=8 format=3 uid="uid://bcb7gdbykdm4g"]
 
-[ext_resource type="Script" uid="uid://dx54g0ggdwww2" path="res://nameinputsystem.gd" id="1_w4v5f"]
+[ext_resource type="Script" uid="uid://dx54g0ggdwww2" path="res://nameinputsystem.gd" id="1_ljb8l"]
 
 [sub_resource type="SystemFont" id="SystemFont_ypof5"]
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypof5"]
 
@@ -21,7 +22,7 @@ offset_right = 570.0
 offset_bottom = 480.0
 theme_override_constants/separation = 16
 alignment = 1
-script = ExtResource("1_w4v5f")
+script = ExtResource("1_ljb8l")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2

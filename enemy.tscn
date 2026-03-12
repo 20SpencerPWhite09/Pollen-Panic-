@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqlj1ixtotd4o"]
+
+[ext_resource type="Script" uid="uid://cu3lqjok24yrb" path="res://enemy.gd" id="1_xn4jr"]
+[ext_resource type="Texture2D" uid="uid://blg6bejx35f1p" path="res://blue square.jpg" id="2_jerkr"]
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_xn4jr")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-9.536743e-07, -9.536743e-07)
+scale = Vector2(0.21289064, 0.21289064)
+texture = ExtResource("2_jerkr")
